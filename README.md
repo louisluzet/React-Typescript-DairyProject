@@ -13,4 +13,4 @@
 + 간단한 디자인
 
 ### 결과물
-<img width="500" src="https://user-images.githubusercontent.com/60097575/174443930-201cb696-bd99-4c15-bde6-d26d7c316e6c.png">
+<img src="https://user-images.githubusercontent.com/60097575/174443930-201cb696-bd99-4c15-bde6-d26d7c316e6c.png">
