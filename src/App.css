@@ -1,38 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
 .App {
   text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  /* background-color: #F7F6F3; */
+}
+.DiaryEditor {
+  padding: 20px;
+  
+}
+.DiaryEditor input, textarea {
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 500px;
+  padding: 10px;
+  /* box-shadow: 1px 1px 1px silver; */
+}
+.DiaryEditor textarea {
+  height: 150px;
+}
+.DiaryEditor select {
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 200px;
+  height: 30px;
+  padding-left: 15px;
+  margin-left: 10px;
+}
+.DiaryEditor button {
+  width: 520px;
+  height: 35px !important;
+  border: 2px solid #00499E;
+  border-radius: 5px;
+  height: 30px;
+  background-color: #C5DFF6;
+  color: #00499E;
+  font-weight: 600;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* List */
+.DiaryList {
+  /* border: 1px solid gray; */
+  padding: 20px;
+  margin-top: 20px;
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.DiaryItem {
+  text-align: left;
+  background-color: #F7F6F3;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.DiaryItem .info {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.DiaryItem .date {
+  color: gray;
 }
+.DiaryItem .content {
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.DiaryItem .remove {
+  float: right;
+  margin-right: 5px;
+  color: #FF0000;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #F7F6F3;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.DiaryItem .remove:active {
+  color: #ffb4b4;
+}
+.DiaryItem .update {
+  float: right;
+  margin-right: 5px;
+  color: #245de0;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #F7F6F3;
+
+}
+.DiaryItem .update:active {
+  color: #98b1ea;
 }
