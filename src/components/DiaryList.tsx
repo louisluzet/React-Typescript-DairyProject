@@ -1,5 +1,4 @@
 import DairyItem from "./DiaryItem";
-import { listType } from "./Type";
 
 const DiaryList = (props: any) => {
     //console.log(diaryList)
