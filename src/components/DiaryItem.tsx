@@ -2,11 +2,6 @@ import React, { useEffect } from "react";
 import { useRef, useState } from "react";
 
 const DairyItem = (props: any) => {
-
-    useEffect(() => {
-        console.log(`${props.id}번째 아이템 렌더`);
-    })
-
     const [isEdit, setIsEdit] = useState(false);
     const toggleIsEdit = () => setIsEdit(!isEdit);
 
