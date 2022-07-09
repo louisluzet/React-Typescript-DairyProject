@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useMemo, useReducer, useRef } from 'reac
 import './App.css';
 import DiaryEditor from './components/DiaryEditor';
 import DiaryList from './components/DiaryList';
-import { listType } from './Type';
 
 const reducer = (state: any, action: any) => {
   switch (action.type) {
@@ -28,9 +27,9 @@ const reducer = (state: any, action: any) => {
   }
 }
 
-function App() {
+export const DairyStateContext = React.createContext(defaultValue);
 
-  // const [data, setData] = useState([]);
+function App() {
 
   const [data, dispatch] = useReducer(reducer, []);
 
@@ -82,6 +81,7 @@ function App() {
   const {goodCount, badCount, goodRatio} = getDiaryAnalysis;
 
   return (
+    <DairyStateContext.Provider>
     <div className="App">
       <DiaryEditor onCreate={onCreate}/>
       <div>전체 일기: {data.length} </div>
@@ -90,6 +90,11 @@ function App() {
       <div>기분이 좋은 일기의 비율: {goodRatio}</div>
       <DiaryList diaryList={data} onRemove={onRemove} onEdit={onEdit}/>
     </div>
+    </DairyStateContext.Provider>
   );
 }
 export default App;
+function defaultValue<T>(defaultValue: any) {
+  throw new Error('Function not implemented.');
+}
+
